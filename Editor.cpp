@@ -120,7 +120,10 @@ void Editor::loop()
 								SaveAsPicker savepicker(path, font);
 								string newpath = savepicker.loop();
 								if (newpath != "")
+									{
 									image.saveToFile(newpath);
+									path = newpath;
+								}
 							}
 							break;
 							}
